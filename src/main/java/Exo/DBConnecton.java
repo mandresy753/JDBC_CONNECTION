@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnecton {
-    String url = "jdbc:postgresql://localhost:5432/product_management_db";
-    String user = "product_manager_user";
-    String pwd = "123456";
+   private String url = "jdbc:postgresql://localhost:5432/product_management_db";
+   private String user = "product_manager_user";
+   private String pwd = "123456";
 
    public Connection getDBConnection () {
        try {
