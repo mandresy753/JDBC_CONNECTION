@@ -5,6 +5,7 @@ import java.time.Instant;
 public class Product {
     private int id;
     private String name;
+    private double price;
     private Instant creationDatetime;
     private Category category;
 
@@ -26,6 +27,8 @@ public class Product {
         return id;
     }
 
+    public int setId(int id) {return this.id = id;}
+
     public String getName() {
         return name;
     }
@@ -46,4 +49,16 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", creationDateTime=" + creationDatetime +
+                ", category=" + (category != null ? category.getName() : "null") +
+                '}';
+    }
+
 }
